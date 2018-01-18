@@ -7,7 +7,7 @@ Go to your remote moodle directory (cd /var/www/html/moodle):
 * If you have any red lines, type:
   * git add -A
   * git commit -m "Commit untracked files"
-  * git push origin {branchname}
+  * git push origin {branchname} (should be dev-customblock)
 * Then:
   * git checkout -b --no-track dev-bocblock dev-customblock
 * Fork this repository to your github: https://github.com/oliver-jk-redding/moodle-block_boc_countdown
