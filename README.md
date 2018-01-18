@@ -25,7 +25,6 @@ Go to your remote moodle directory (cd /var/www/html/moodle):
   * Rremember to increment the version number in the version.php file and rerun the upgrade script `sudo -u www-data php admin/cli/upgrade.php` when you change/add language strings
 * Make it pretty
   * Add some styles to `styles.css` to make the title, the description and the countdown timer pretty
-  * When the timer reaches to make the  and add an image that displays when Beer O'Clock is reached
 * Once you have got the timer showing and working, test what happens when beer o'clock is reached by setting the time for beer o'clock to one minute from your current time. Just change the line in block_boc_countdown.php which says`'boctime' => strtotime('friday 5pm')` to one minute from the current time e.g. `'friday 10:23am'`). Then wait for that minute to arrive. You will see a message is displayed:
   * Improve the message. You will have to make an edit to the `boc_countdown.js` file.
   * Get the timer to show an image when beer o'clock arrives. One way to do this is to use jquery to add a class when the timer reaches 0 - https://api.jquery.com/addclass/ - then add a background image to this class in the styles.css file. You will also have to add height and width in the styles.css file. Or you could use jquery to add an `<img>` element. Your choice. Use google to help if you need.
