@@ -31,9 +31,9 @@ Go to your remote moodle directory (cd /var/www/html/moodle):
 * Write some documentation using the headings below
 * Delete the instructions in this readme
 * Add and commit changes:
-* git add blocks/boc_countdown
-* git commit -m "blocks/boc_countdown: Fix and improve plugin"
-* git subtree push --prefix blocks/boc_countdown block_boc_countdown master
+ * git add blocks/boc_countdown
+ * git commit -m "blocks/boc_countdown: Fix and improve plugin"
+ * git subtree push --prefix blocks/boc_countdown block_boc_countdown master
 
 # BOC Countdown Plugin Manual
 
