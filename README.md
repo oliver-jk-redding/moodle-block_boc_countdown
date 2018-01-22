@@ -20,7 +20,7 @@ Go to your remote moodle directory (cd /var/www/html/moodle):
 
 ## Make the plugin better
 
-* Write a description of the plugin that shows in the block above the timer and below the title. Use a language string for this by adding a string to your lang/en/block_boc_countdown.php file. Then insert the description as an html element.
+* Write a description of the plugin that shows in the block above the timer and below the title. Use a language string for this by adding a string to your the lang/en/block_boc_countdown.php file. Then insert the description as an html element.
   * HINT: You will need to figure out how to use the `get_string` function within the `html_writer` function.
   * Rremember to increment the version number in the version.php file and rerun the upgrade script `sudo -u www-data php admin/cli/upgrade.php` when you change/add language strings
 * Make it pretty
