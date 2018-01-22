@@ -39,14 +39,34 @@ class block_boc_countdown extends block_base {
      * @return void
      */
     public function init() {
+        $this->title = get_string('pluginname', 'block_boc_countdown');
     }
 
+    /**
+     * Gets the block contents.
+     *
+     * If we can avoid it better not check the server status here as connecting
+     * to the server will slow down the whole page load.
+     *
+     * @return string The block HTML.
+     */
     public function get_content() {
+        global $OUTPUT;
+        if ($this->content !== null) {
+            return $this->content;
+        }
 
         $params = array(
             'boctime' => strtotime('friday 5pm')
         );
         $this->page->requires->js_call_amd('block_boc_countdown/boc_countdown', 'init', $params);
 
+        $this->content = new stdClass();
+
+        $this->content->text  = html_writer::start_tag('div', array('class' => 'boc_countdown'));
+        $this->content->text .= html_writer::tag('div', '', array('class' => 'boc_timer'));
+        $this->content->text .= html_writer::end_tag('div');
+
+        return $this->content;
     }
 }
